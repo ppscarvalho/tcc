@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Loja Inspiração";
+}
+<!--Site de downloads dos icones-->
+<!--https://freeicons.io/-->
+<div class="panel panel-de-gestao-sistema">
+    <div class="panel-heading">Painel de Gestão do Sistema<div class="clearfix"></div></div>
+    <div class="panel-body">
+
+        <div class="row" style="text-align:center; margin-left:50px">
+            <div class="col-md-2 col-xs-12">
+                <a asp-controller="Produto" asp-action="CadastroProduto" title="Cadastro de Produtos">
+                    <img src="~/icones/product.png" />
+                    <div class="form-group">
+                        Produto
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-2 col-xs-12">
+                <a asp-controller="ContasPagar" asp-action="ContasPagar" title="Contas a Pagar">
+                    <img src="~/icones/bills-to-pay.png" />
+                    <div class="form-group">
+                        Contas a Pagar
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <a asp-controller="Cliente" asp-action="CadastroCliente" title="Cadastro de Clientes">
+                    <img src="~/icones/customer.png" />
+                    <div class="form-group">
+                        Cliente
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-2 col-xs-12">
+                <a asp-controller="Caixa" asp-action="AbrirCaixa" title="Caixa">
+                    <img src="~/icones/cashier.png" />
+                    <div class="form-group">
+                        Caixa
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row" style="text-align:center; margin-left:50px">
+            <div class="col-md-2 col-xs-12">
+                <a asp-controller="Fornecedor" asp-action="CadastroFornecedor" title="Cadastro de Fornecedores">
+                    <img src="~/icones/supplier.png" />
+                    <div class="form-group">
+                        Fornecedor
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <a asp-controller="ContasReceber" asp-action="ContasReceber" title="Cadastro de Contas a Receber">
+                    <img src="~/icones/bills-to-receive.png" />
+                    <div class="form-group">
+                        Contas a Receber
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-2 col-xs-12">
+                <a asp-controller="NotasFiscais" asp-action="CadastroNotaFiscal" title="Cadastro de Nota Fiscal">
+                    <img src="~/icones/invoices.png" />
+                    <div class="form-group">
+                        Notas Fiscais
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-2 col-xs-12">
+                <a asp-controller="Relatorio" asp-action="Consultar-Relatorio" title="Relatórios">
+                    <img src="~/icones/report.png" />
+                    <div class="form-group">
+                        Relatórios
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

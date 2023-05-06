@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotaFiscal.Api", "src\NotaFiscal.Api\NotaFiscal.Api.csproj", "{D549F10B-289B-4927-9604-7893951381C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotaFiscal.Application", "src\NotaFiscal.Application\NotaFiscal.Application.csproj", "{5885368D-5600-45D9-8C17-6CA60BD6189F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotaFiscal.Domain", "src\NotaFiscal.Domain\NotaFiscal.Domain.csproj", "{83F052B1-64E6-4D96-B017-50F0B00A628B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotaFiscal.Infra", "src\NotaFiscal.Infra\NotaFiscal.Infra.csproj", "{25BDF038-FEBA-4D06-8C8C-ECAD54F9B2AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D549F10B-289B-4927-9604-7893951381C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D549F10B-289B-4927-9604-7893951381C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D549F10B-289B-4927-9604-7893951381C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D549F10B-289B-4927-9604-7893951381C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5885368D-5600-45D9-8C17-6CA60BD6189F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5885368D-5600-45D9-8C17-6CA60BD6189F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5885368D-5600-45D9-8C17-6CA60BD6189F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5885368D-5600-45D9-8C17-6CA60BD6189F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83F052B1-64E6-4D96-B017-50F0B00A628B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F052B1-64E6-4D96-B017-50F0B00A628B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F052B1-64E6-4D96-B017-50F0B00A628B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F052B1-64E6-4D96-B017-50F0B00A628B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25BDF038-FEBA-4D06-8C8C-ECAD54F9B2AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25BDF038-FEBA-4D06-8C8C-ECAD54F9B2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25BDF038-FEBA-4D06-8C8C-ECAD54F9B2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25BDF038-FEBA-4D06-8C8C-ECAD54F9B2AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90B82EF1-B3BC-47B5-B9E2-796B9A3A371D}
+	EndGlobalSection
+EndGlobal

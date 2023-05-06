@@ -1,0 +1,50 @@
+﻿.panel-de-gestao-sistema {
+    border-color: #34495e
+}
+
+    .panel-de-gestao-sistema > .panel-heading {
+        color: #fff;
+        background-color: #614284;
+        border-color: #34495e
+    }
+
+        .panel-de-gestao-sistema > .panel-heading + .panel-collapse > .panel-body {
+            border-top-color: #34495e
+        }
+
+        .panel-de-gestao-sistema > .panel-heading .badge {
+            color: #34495e;
+            background-color: #fff
+        }
+
+    .panel-de-gestao-sistema > .panel-footer + .panel-collapse > .panel-body {
+        border-bottom-color: #34495e
+    }
+
+.portlet-panel {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.box-header.with-border {
+    border-bottom: 1px solid #EDEDED;
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+.box-title {
+    font-size: 17px !important;
+    margin: 4px;
+    line-height: 1;
+    font-weight: 400;
+}

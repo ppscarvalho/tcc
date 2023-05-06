@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" asp-append-version="true">
+    <link href="~/lib/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/Vendors/nprogress/nprogress.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/custom.min.css" rel="stylesheet" asp-append-version="true">
+    <link href="~/css/panel-de-gestao-sistema.css" rel="stylesheet" asp-append-version="true">
+    <link href="~/sweetalert/sweetalert.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/datatables/css/jquery.dataTables.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/Vendors/select2/select2.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/Vendors/waitMe/css/waitMe.min.css" rel="stylesheet" asp-append-version="true" />
+
+    <style type="text/css">
+        .areaImagem {
+            float: left;
+            margin-top: 3px;
+        }
+
+            .areaImagem img {
+                width: 120px;
+            }
+
+        .logout {
+            padding: 5px 16px;
+            float: right;
+            font-size: 13px;
+        }
+
+            .logout span {
+                padding-right: 5px;
+            }
+
+        .underlink {
+            display: inline-block;
+            color: #000;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+            .underlink::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 1px;
+                background: #000;
+                transition: width .3s;
+            }
+
+            .underlink:hover::after {
+                width: 100%;
+                transition: width .3s;
+            }
+
+
+        .section-photo {
+            margin-top: 4%;
+        }
+
+        .avatarAdmin {
+            vertical-align: middle;
+            width: 35px !important;
+            height: 35px !important;
+            border-radius: 35%;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="~/images/logo-loja.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span><strong>Bem Vindo!</strong> </span>
+                            <h2><strong>@ViewBag.NmUsuario</strong> </h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li><a asp-area="" asp-controller="Default" asp-action="Index"><i class="fa fa-home"></i> Home</a></li>
+                                <li>
+                                    <a><i class="fa fa-bars"></i> Administrativo <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a asp-controller="" asp-action="" title="Produto">Produto</a></li>
+                                        <li><a asp-controller="" asp-action="" title="Contas a Pagar">Contas a Pagar</a></li>
+                                        <li><a asp-controller="" asp-action="" title="Cliente">Cliente</a></li>
+                                        <li><a asp-controller="" asp-action="" title="Fornecedor">Fornecedor</a></li>
+                                        <li><a asp-controller="" asp-action="" title="Contas a Receber">Matrículas</a></li>
+                                        <li><a asp-controller="" asp-action="" title="Nota Fiscal">Nota Fiscal</a></li>
+                                        <li><a asp-controller="" asp-action="" title="Relatórios">Relatórios</a></li>
+                                        <li><a asp-area="Caixa" asp-controller="" asp-action="" title="Caixar">Caixa</a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="right_col" role="main">
+                @RenderBody()
+            </div>
+
+        </div>
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                © @DateTime.Now.Year - Gestão de Loja
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+
+        <script src="~/Vendors/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js" asp-append-version="true"></script>
+        <script src="~/lib/datatables/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+        <script src="~/Vendors/meiomask/min/meiomask.min.js" asp-append-version="true"></script>
+        <script src="~/Vendors/nprogress/nprogress.js" asp-append-version="true"></script>
+        <script src="~/js/custom.min.js" asp-append-version="true"></script>
+        <script src="~/sweetalert/sweetalert.min.js" asp-append-version="true"></script>
+        <script src="~/sweetalert/sweetalert.js" asp-append-version="true"></script>
+        <script src="~/Vendors/select2/select2.full.min.js" asp-append-version="true"></script>
+        <script src="~/Vendors/waitMe/js/waitMe.js" asp-append-version="true"></script>
+        <script src="~/Vendors/passwordStrengthMeter/passwordStrengthMeter.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>
