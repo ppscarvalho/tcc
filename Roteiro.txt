@@ -11,10 +11,10 @@ Loja.Inspiracao.Core
 
 Loja.Inspiracao.Produto.Api
  -src
-	-Produto.Api
-	-Produto.Application
-	-Produto.Domain
-	-Produto.Infra
+	-Loja.Inspiracao.Produto.Api
+	-Loja.Inspiracao.Produto.Application
+	-Loja.Inspiracao.Produto.Domain
+	-Loja.Inspiracao.Produto.Infra
 	
 Loja.Inspiracao.Fornecedor.Api
  -src
@@ -64,3 +64,9 @@ Loja.Inspiracao.Autenticacao.Api
 	-Autenticacao.Application
 	-Autenticacao.Domain
 	-Autenticacao.Infra		
+	
+Loja.Inspiracao.Util
+ -src
+	-Loja.Inspiracao.Core
+	-Loja.Inspiracao.RabbitMQ
+	
