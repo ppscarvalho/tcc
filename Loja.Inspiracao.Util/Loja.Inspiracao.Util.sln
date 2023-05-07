@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Inspiracao.Core", "src\Loja.Inspiracao.Core\Loja.Inspiracao.Core.csproj", "{77AF821C-FAFA-40F8-9BD1-F2F5EC43A03D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Inspiracao.RabbitMQ", "src\Loja.Inspiracao.RabbitMQ\Loja.Inspiracao.RabbitMQ.csproj", "{2B2861E2-1112-4E1B-939B-00F7825633EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77AF821C-FAFA-40F8-9BD1-F2F5EC43A03D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AF821C-FAFA-40F8-9BD1-F2F5EC43A03D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AF821C-FAFA-40F8-9BD1-F2F5EC43A03D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AF821C-FAFA-40F8-9BD1-F2F5EC43A03D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B2861E2-1112-4E1B-939B-00F7825633EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2861E2-1112-4E1B-939B-00F7825633EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2861E2-1112-4E1B-939B-00F7825633EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2861E2-1112-4E1B-939B-00F7825633EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AF791E8-F451-465C-B2D9-8297C72EF443}
+	EndGlobalSection
+EndGlobal
