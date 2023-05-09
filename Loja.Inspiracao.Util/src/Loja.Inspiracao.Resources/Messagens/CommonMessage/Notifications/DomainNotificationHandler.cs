@@ -1,6 +1,10 @@
 ﻿using MediatR;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
-namespace Loja.Inspiracao.Core.Messagens.CommonMessage.Notifications
+namespace Loja.Inspiracao.Resources.Messagens.CommonMessage.Notifications
 {
     public class DomainNotificationHandler : INotificationHandler<DomainNotification>
     {

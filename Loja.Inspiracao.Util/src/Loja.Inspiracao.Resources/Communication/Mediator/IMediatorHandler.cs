@@ -1,5 +1,9 @@
-﻿
-namespace Loja.Inspiracao.Core.Communication.Mediator
+﻿using Loja.Inspiracao.Resources.Messagens;
+using Loja.Inspiracao.Resources.Messagens.CommonMessage.Notifications;
+using Loja.Inspiracao.Resources.Util;
+using System.Threading.Tasks;
+
+namespace Loja.Inspiracao.Resources.Communication.Mediator
 {
     public interface IMediatorHandler
     {

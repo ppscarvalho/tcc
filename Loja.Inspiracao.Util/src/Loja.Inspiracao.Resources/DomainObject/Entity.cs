@@ -1,8 +1,11 @@
 ﻿#nullable disable
 
 using FluentValidation.Results;
+using Loja.Inspiracao.Resources.Messagens;
+using System;
+using System.Collections.Generic;
 
-namespace Loja.Inspiracao.Core.DomainObject
+namespace Loja.Inspiracao.Resources.DomainObject
 {
     public abstract class Entity
     {

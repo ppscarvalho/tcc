@@ -1,6 +1,7 @@
 ﻿using MediatR;
+using System;
 
-namespace Loja.Inspiracao.Core.Messagens.CommonMessage.Notifications
+namespace Loja.Inspiracao.Resources.Messagens.CommonMessage.Notifications
 {
     public class DomainNotification : Message, INotification
     {

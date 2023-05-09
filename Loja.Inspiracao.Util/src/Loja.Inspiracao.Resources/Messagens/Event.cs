@@ -1,7 +1,8 @@
 ﻿#nullable disable
 using MediatR;
+using System;
 
-namespace Loja.Inspiracao.Core.Messagens
+namespace Loja.Inspiracao.Resources.Messagens
 {
     public abstract class Event : Message, INotification
     {

@@ -1,5 +1,6 @@
-﻿
-namespace Loja.Inspiracao.Core.Messagens.CommonMessage.DomainEvents
+﻿using System;
+
+namespace Loja.Inspiracao.Resources.Messagens.CommonMessage.DomainEvents
 {
     public class DomainEvent : Event
     {

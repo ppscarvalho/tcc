@@ -1,9 +1,11 @@
 ﻿#nullable disable
 
 using FluentValidation.Results;
+using Loja.Inspiracao.Resources.Util;
 using MediatR;
+using System;
 
-namespace Loja.Inspiracao.Core.Messagens
+namespace Loja.Inspiracao.Resources.Messagens
 {
     public abstract class Command : Message, IRequest<DefaultResult>
     {
