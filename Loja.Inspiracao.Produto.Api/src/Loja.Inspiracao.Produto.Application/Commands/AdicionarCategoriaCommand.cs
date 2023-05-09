@@ -1,6 +1,8 @@
-﻿using FluentValidation;
+﻿#nullable disable
+
+using FluentValidation;
 using FluentValidation.Results;
-using Loja.Inspiracao.Core.Messagens;
+using Loja.Inspiracao.Resources.Messagens;
 
 namespace Loja.Inspiracao.Produto.Application.Commands
 {
@@ -8,6 +10,8 @@ namespace Loja.Inspiracao.Produto.Application.Commands
     {
         public Guid Id { get; private set; }
         public string Descricao { get; private set; }
+
+        public AdicionarCategoriaCommand() { }
 
         public AdicionarCategoriaCommand(Guid id, string description)
         {

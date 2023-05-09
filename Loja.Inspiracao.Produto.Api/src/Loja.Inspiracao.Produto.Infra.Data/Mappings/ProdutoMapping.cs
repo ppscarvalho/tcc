@@ -18,15 +18,19 @@ namespace Loja.Inspiracao.Produto.Infra.Data.Mappings
                 .HasMaxLength(200)
                 .IsRequired();
 
-            builder.Property(c => c.Preco)
+            builder.Property(c => c.ValorCompra)
+                .HasPrecision(18, 2)
+                .IsRequired();
+
+            builder.Property(c => c.ValorVenda)
+                .HasPrecision(18, 2)
+                .IsRequired();
+
+            builder.Property(c => c.MargemLucro)
                 .HasPrecision(18, 2)
                 .IsRequired();
 
             builder.Property(c => c.Estoque)
-                .IsRequired();
-
-            builder.Property(c => c.Imagem)
-                .HasMaxLength(250)
                 .IsRequired();
 
             builder.Property(c => c.Ativo)

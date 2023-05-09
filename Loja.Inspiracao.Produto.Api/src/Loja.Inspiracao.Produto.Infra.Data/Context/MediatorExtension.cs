@@ -1,5 +1,8 @@
-﻿using Loja.Inspiracao.Core.Communication.Mediator;
-using Loja.Inspiracao.Core.DomainObject;
+﻿#nullable disable
+
+using Loja.Inspiracao.Resources.Communication.Mediator;
+using Loja.Inspiracao.Resources.DomainObject;
+
 namespace Loja.Inspiracao.Produto.Infra.Data.Context
 {
     public static class MediatorExtension

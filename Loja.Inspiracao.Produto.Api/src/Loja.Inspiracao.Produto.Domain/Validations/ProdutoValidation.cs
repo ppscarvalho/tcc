@@ -23,9 +23,13 @@ namespace Loja.Inspiracao.Produto.Domain.Validations
                 .NotEmpty()
                 .WithMessage("A descrição do produto não foi informada.");
 
-            RuleFor(c => c.Preco)
+            RuleFor(c => c.ValorCompra)
                 .GreaterThan(0)
-                .WithMessage("O valor do produto precisa ser maior que 0 (zero).");
+                .WithMessage("O valor de compra do produto precisa ser maior que 0 (zero).");
+
+            RuleFor(c => c.ValorVenda)
+                .GreaterThan(0)
+                .WithMessage("O valor de venda do produto precisa ser maior que 0 (zero).");
         }
     }
 }

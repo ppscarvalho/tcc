@@ -1,9 +1,9 @@
 ﻿#nullable disable
 
-using Loja.Inspiracao.Core.Data;
 using Loja.Inspiracao.Produto.Domain.Entities;
 using Loja.Inspiracao.Produto.Domain.Interfaces;
 using Loja.Inspiracao.Produto.Infra.Data.Context;
+using Loja.Inspiracao.Resources.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Loja.Inspiracao.Produto.Infra.Data.Repository
@@ -22,7 +22,7 @@ namespace Loja.Inspiracao.Produto.Infra.Data.Repository
 
         public async Task<IEnumerable<Categoria>> ObterTodasCategorias()
         {
-            return await _context.Categoria.AsNoTracking().ToListAsync();
+            return await _context.Categoria.AsNoTracking().Include(c => c.Produto).ToListAsync();
         }
 
         public async Task<Categoria> ObterCategoriaPorId(Guid id)

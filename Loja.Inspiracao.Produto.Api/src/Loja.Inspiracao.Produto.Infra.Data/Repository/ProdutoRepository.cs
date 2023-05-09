@@ -1,8 +1,8 @@
 ﻿#nullable disable
 
-using Loja.Inspiracao.Core.Data;
 using Loja.Inspiracao.Produto.Domain.Interfaces;
 using Loja.Inspiracao.Produto.Infra.Data.Context;
+using Loja.Inspiracao.Resources.Data;
 using Microsoft.EntityFrameworkCore;
 using LojaInspiracao = Loja.Inspiracao.Produto.Domain.Entities;
 
@@ -22,7 +22,7 @@ namespace Loja.Inspiracao.Produto.Infra.Data.Repository
 
         public async Task<IEnumerable<LojaInspiracao.Produto>> ObterTodosProdutos()
         {
-            return await _context.Produto.AsNoTracking().ToListAsync();
+            return await _context.Produto.AsNoTracking().Include(p => p.Categoria).ToListAsync();
         }
 
         public async Task<LojaInspiracao.Produto> ObterPorProdutoId(Guid id)
@@ -30,14 +30,16 @@ namespace Loja.Inspiracao.Produto.Infra.Data.Repository
             return await _context.Produto.FirstOrDefaultAsync(e => e.Id == id);
         }
 
-        public LojaInspiracao.Produto AdicionarProduto(LojaInspiracao.Produto produto)
+        public async Task<LojaInspiracao.Produto> AdicionarProduto(LojaInspiracao.Produto produto)
         {
-            return _context.Produto.Add(produto).Entity;
+            return (await _context.AddAsync(produto)).Entity;
         }
 
-        public LojaInspiracao.Produto AlterarProduto(LojaInspiracao.Produto product)
+        public async Task<LojaInspiracao.Produto> AlterarProduto(LojaInspiracao.Produto product)
         {
-            return _context.Produto.Update(product).Entity;
+            await Task.CompletedTask;
+            _context.Entry(product).State = EntityState.Modified;
+            return product;
         }
 
         protected virtual void Dispose(bool disposing)

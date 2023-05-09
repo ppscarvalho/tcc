@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using Loja.Inspiracao.Core.Communication.Mediator;
-using Loja.Inspiracao.Core.Messagens;
-using Loja.Inspiracao.Core.Messagens.CommonMessage.Notifications;
-using Loja.Inspiracao.Core.Util;
 using Loja.Inspiracao.Produto.Application.Commands;
 using Loja.Inspiracao.Produto.Application.ViewModels;
 using Loja.Inspiracao.Produto.Domain.Entities;
 using Loja.Inspiracao.Produto.Domain.Interfaces;
+using Loja.Inspiracao.Resources.Communication.Mediator;
+using Loja.Inspiracao.Resources.Messagens;
+using Loja.Inspiracao.Resources.Messagens.CommonMessage.Notifications;
+using Loja.Inspiracao.Resources.Util;
 using MediatR;
 
 namespace Loja.Inspiracao.Produto.Application.Handler

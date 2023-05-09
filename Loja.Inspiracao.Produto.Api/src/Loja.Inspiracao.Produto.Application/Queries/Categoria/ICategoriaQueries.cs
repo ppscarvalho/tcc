@@ -5,6 +5,6 @@ namespace Loja.Inspiracao.Produto.Application.Queries.Categoria
     public interface ICategoriaQueries
     {
         Task<IEnumerable<CategoriaViewModel>> ObterTodasCategorias();
-        Task<CategoriaViewModel> ObterCategoriaPodId(Guid id);
+        Task<CategoriaViewModel> ObterCategoriaPorId(Guid id);
     }
 }

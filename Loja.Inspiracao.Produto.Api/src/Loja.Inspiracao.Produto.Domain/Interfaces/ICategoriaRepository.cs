@@ -1,5 +1,5 @@
-﻿using Loja.Inspiracao.Core.Data;
-using Loja.Inspiracao.Produto.Domain.Entities;
+﻿using Loja.Inspiracao.Produto.Domain.Entities;
+using Loja.Inspiracao.Resources.Data;
 
 namespace Loja.Inspiracao.Produto.Domain.Interfaces
 {

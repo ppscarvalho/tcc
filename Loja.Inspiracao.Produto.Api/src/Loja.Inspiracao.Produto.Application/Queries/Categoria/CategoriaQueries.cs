@@ -21,7 +21,7 @@ namespace Loja.Inspiracao.Produto.Application.Queries.Categoria
             return _mapper.Map<IEnumerable<CategoriaViewModel>>(await _categoryRepository.ObterTodasCategorias());
         }
 
-        public async Task<CategoriaViewModel> ObterCategoriaPodId(Guid id)
+        public async Task<CategoriaViewModel> ObterCategoriaPorId(Guid id)
         {
             return _mapper.Map<CategoriaViewModel>(await _categoryRepository.ObterCategoriaPorId(id));
         }

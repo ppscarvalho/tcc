@@ -1,7 +1,7 @@
 ﻿#nullable disable
 
-using Loja.Inspiracao.Core.DomainObject;
 using Loja.Inspiracao.Produto.Domain.Validations;
+using Loja.Inspiracao.Resources.DomainObject;
 using System.ComponentModel.DataAnnotations;
 
 namespace Loja.Inspiracao.Produto.Domain.Entities

@@ -1,9 +1,9 @@
 ﻿using FluentValidation.Results;
-using Loja.Inspiracao.Core.Communication.Mediator;
-using Loja.Inspiracao.Core.Data;
-using Loja.Inspiracao.Core.DomainObject;
-using Loja.Inspiracao.Core.Messagens;
 using Loja.Inspiracao.Produto.Domain.Entities;
+using Loja.Inspiracao.Resources.Communication.Mediator;
+using Loja.Inspiracao.Resources.Data;
+using Loja.Inspiracao.Resources.DomainObject;
+using Loja.Inspiracao.Resources.Messagens;
 using Microsoft.EntityFrameworkCore;
 using LojaInspiracao = Loja.Inspiracao.Produto.Domain.Entities;
 namespace Loja.Inspiracao.Produto.Infra.Data.Context

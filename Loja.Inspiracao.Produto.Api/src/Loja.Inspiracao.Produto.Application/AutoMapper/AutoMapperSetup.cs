@@ -20,12 +20,22 @@ namespace Loja.Inspiracao.Produto.Application.AutoMapper
     {
         public MappingProfile()
         {
-            CreateMap<AdicionarProdutoCommand, LojaInspiracao.Produto>().ReverseMap();
-            CreateMap<ProdutoViewModel, LojaInspiracao.Produto>().ReverseMap();
-
+            //Categoria
             CreateMap<CategoriaViewModel, AdicionarCategoriaCommand>().ReverseMap();
             CreateMap<AdicionarCategoriaCommand, Categoria>().ReverseMap();
-            CreateMap<CategoriaViewModel, Categoria>().ReverseMap();
+            CreateMap<Categoria, CategoriaViewModel>().ForMember(
+                dest => dest.ProdutosViewModel,
+                opt => opt.MapFrom(prop => prop.Produto)).ReverseMap();
+
+
+            //Produto
+            CreateMap<ProdutoViewModel, AdicionarProdutoCommand>().ReverseMap();
+            CreateMap<AdicionarProdutoCommand, LojaInspiracao.Produto>().ReverseMap();
+
+            CreateMap<LojaInspiracao.Produto, ProdutoViewModel>().ForMember(
+                dest => dest.CategoriaViewModel,
+                opt => opt.MapFrom(b => b.Categoria)
+                ).ReverseMap();
         }
     }
 }
