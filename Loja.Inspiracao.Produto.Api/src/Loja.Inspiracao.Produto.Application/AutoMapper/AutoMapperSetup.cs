@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Loja.Inspiracao.MQ.Models.Categoria;
 using Loja.Inspiracao.Produto.Application.Commands;
 using Loja.Inspiracao.Produto.Application.ViewModels;
 using Loja.Inspiracao.Produto.Domain.Entities;
@@ -20,13 +21,20 @@ namespace Loja.Inspiracao.Produto.Application.AutoMapper
     {
         public MappingProfile()
         {
-            //Categoria
+            //Adicionar Categoria
             CreateMap<CategoriaViewModel, AdicionarCategoriaCommand>().ReverseMap();
             CreateMap<AdicionarCategoriaCommand, Categoria>().ReverseMap();
-            CreateMap<Categoria, CategoriaViewModel>().ForMember(
-                dest => dest.ProdutosViewModel,
-                opt => opt.MapFrom(prop => prop.Produto)).ReverseMap();
 
+            //Alterar Categoria
+            CreateMap<CategoriaViewModel, AlterarCategoriaCommand>().ReverseMap();
+            CreateMap<AlterarCategoriaCommand, Categoria>().ReverseMap();
+
+            CreateMap<Categoria, CategoriaViewModel>().ReverseMap();
+
+            //Response Categoria Out
+            CreateMap<CategoriaViewModel, ResponseCategoriaOut>().ReverseMap();
+            CreateMap<ResponseCategoriaOut, AdicionarCategoriaCommand>().ReverseMap();
+            CreateMap<ResponseCategoriaOut, AlterarCategoriaCommand>().ReverseMap();
 
             //Produto
             CreateMap<ProdutoViewModel, AdicionarProdutoCommand>().ReverseMap();

@@ -11,7 +11,9 @@ using MediatR;
 
 namespace Loja.Inspiracao.Produto.Application.Handler
 {
-    public class CategoriaCommandHandler : IRequestHandler<AdicionarCategoriaCommand, DefaultResult>
+    public class CategoriaCommandHandler :
+        IRequestHandler<AdicionarCategoriaCommand, DefaultResult>,
+        IRequestHandler<AlterarCategoriaCommand, DefaultResult>
     {
         private readonly ICategoriaRepository _categoriaRepository;
         private readonly IMediatorHandler _mediatorHandler;
@@ -38,12 +40,17 @@ namespace Loja.Inspiracao.Produto.Application.Handler
             return new DefaultResult { Result = entity, Success = result };
         }
 
-        //private static void AddEventToPublish(AdicionarCategoriaCommand request, Categoria categoria)
-        //{
-        //    var categoryEvent = new CategoryAddEvent(categoria.Id, request.Description);
-        //    categoryEvent.SetRoutingKey("SisLoja.Category");
-        //    categoria.AddEvent(categoryEvent);
-        //}
+        public async Task<DefaultResult> Handle(AlterarCategoriaCommand request, CancellationToken cancellationToken)
+        {
+            if (!ValidateCommand(request)) return new DefaultResult { Result = "Error", Success = false };
+
+            var categoria = _mapper.Map<Categoria>(request);
+            var entity = _mapper.Map<CategoriaViewModel>(await _categoriaRepository.AlterarCategoria(categoria));
+
+            var result = await _categoriaRepository.UnitOfWork.Commit();
+
+            return new DefaultResult { Result = entity, Success = result };
+        }
 
         private bool ValidateCommand(Command message)
         {

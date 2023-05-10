@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WebApp.Models.CategoriaViewModel>
+
+@{
+    ViewData["Title"] = "Loja Inspiração";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Consulta Categoria</h3>
+                    <div style="text-align:right; margin-top: 10px">
+                        <a asp-controller="Categoria" asp-action="Create" class="btn btn-success"> Novo Cadastro</a>
+                    </div>
+
+                    <p>@ViewBag.Mensage</p>
+
+                </div>
+            </div>
+            <div class="card">
+
+            <!-- /.card-header -->
+                <div class="card-body p-0">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>@Html.DisplayNameFor(model => model.Descricao)</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Descricao)
+                                    </td>
+                                    <td>
+                                        <a asp-controller="Categoria" asp-action="Edit" asp-route-id="@item.Id">
+                                            <i class="bi bi-pencil-square btn btn-primary" aria-hidden="true" title="Editar"></i>
+                                        </a>
+                                        <a asp-controller="Categoria" asp-action="Edit" asp-route-id="@item.Id">
+                                            <i class="bi bi-list-ul btn btn-dark" aria-hidden="true" title="Detalhes"></i>
+                                        </a>
+                                        <a asp-controller="Categoria" asp-action="Edit" asp-route-id="@item.Id">
+                                            <i class="bi bi-trash3 btn btn-danger" aria-hidden="true" title="Detalhes"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+

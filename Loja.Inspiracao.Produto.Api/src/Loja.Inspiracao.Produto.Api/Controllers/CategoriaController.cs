@@ -57,9 +57,25 @@ namespace Loja.Inspiracao.Produto.Api.Controllers
         [ProducesResponseType(typeof(DefaultResult), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(DefaultResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(DefaultResult), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<DefaultResult>> AdicionarCategory(CategoriaViewModel categoriaViewModel)
+        public async Task<ActionResult<DefaultResult>> AdicionarCategoria(CategoriaViewModel categoriaViewModel)
         {
             var cmd = _mapper.Map<AdicionarCategoriaCommand>(categoriaViewModel);
+            var result = await _mediatorHandler.SendCommand(cmd);
+
+            if (ValidOperation())
+                return Ok(result);
+            else
+                return BadRequest(GetMessageError());
+        }
+
+        [HttpPost]
+        [Route("alterar-categoria")]
+        [ProducesResponseType(typeof(DefaultResult), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(DefaultResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(DefaultResult), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<DefaultResult>> AlterarCategoria(CategoriaViewModel categoriaViewModel)
+        {
+            var cmd = _mapper.Map<AlterarCategoriaCommand>(categoriaViewModel);
             var result = await _mediatorHandler.SendCommand(cmd);
 
             if (ValidOperation())
