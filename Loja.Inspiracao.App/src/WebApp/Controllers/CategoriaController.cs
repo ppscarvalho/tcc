@@ -1,22 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebApp.Integracao.Categoria;
+using WebApp.Integracao.Application.Interfaces;
+using WebApp.Models;
 
 namespace WebApp.Controllers
 {
     public class CategoriaController : Controller
     {
-        private readonly ICategoriaApiClient _categoriaApiClient;
+        private readonly ICategoriaAppService _categoriaAppService;
 
-        public CategoriaController(ICategoriaApiClient categoriaApiClient)
+        public CategoriaController(ICategoriaAppService categoriaAppService)
         {
-            _categoriaApiClient = categoriaApiClient;
+            _categoriaAppService = categoriaAppService;
         }
 
         // GET: CategoriaController
         public async Task<IActionResult> Index()
         {
-            var result = await _categoriaApiClient.ListaCategoria();
-            return View(result);
+            var categorias = await _categoriaAppService.ObterTodasCategorias();
+            return View(categorias);
         }
 
         // GET: CategoriaController/Details/5
@@ -34,10 +35,15 @@ namespace WebApp.Controllers
         // POST: CategoriaController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<IActionResult> Create(CategoriaViewModel categoriaViewModel)
         {
             try
             {
+                if (!ModelState.IsValid)
+                    return View();
+
+                var result = await _categoriaAppService.SalvarCategoria(categoriaViewModel);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -47,18 +53,24 @@ namespace WebApp.Controllers
         }
 
         // GET: CategoriaController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<IActionResult> Edit(Guid id)
         {
-            return View();
+            var resp = await _categoriaAppService.ObterCategoriaPorId(id);
+            return View(resp);
         }
 
         // POST: CategoriaController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> Edit(CategoriaViewModel categoriaViewModel)
         {
             try
             {
+                if (!ModelState.IsValid)
+                    return View();
+
+                var result = await _categoriaAppService.AlterarCategoria(categoriaViewModel);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -68,7 +80,7 @@ namespace WebApp.Controllers
         }
 
         // GET: CategoriaController/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(Guid? id)
         {
             return View();
         }
