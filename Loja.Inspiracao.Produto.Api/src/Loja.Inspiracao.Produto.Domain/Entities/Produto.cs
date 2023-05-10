@@ -15,14 +15,12 @@ namespace Loja.Inspiracao.Produto.Domain.Entities
         public decimal MargemLucro { get; private set; }
         public int Estoque { get; private set; }
         public bool Ativo { get; private set; }
-        public Guid FornecedorId { get; private set; }
 
         public Categoria Categoria { get; private set; }
-        public Fornecedor Fornecedor { get; private set; }
 
         public Produto() { }
 
-        public Produto(Guid id, Guid categoriaId, string nome, string descricao, decimal valorCompra, decimal valorVenda, decimal margemLucro, Guid fornecedorId)
+        public Produto(Guid id, Guid categoriaId, string nome, string descricao, decimal valorCompra, decimal valorVenda, decimal margemLucro)
         {
             Id = id;
             CategoriaId = categoriaId;
@@ -31,7 +29,6 @@ namespace Loja.Inspiracao.Produto.Domain.Entities
             ValorCompra = valorCompra;
             ValorVenda = valorVenda;
             MargemLucro = margemLucro;
-            FornecedorId = fornecedorId;
             IsValid();
         }
 

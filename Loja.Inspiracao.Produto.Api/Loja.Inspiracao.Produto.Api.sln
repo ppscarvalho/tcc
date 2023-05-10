@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Inspiracao.Produto.Api", "src\Loja.Inspiracao.Produto.Api\Loja.Inspiracao.Produto.Api.csproj", "{707D45EB-B4E1-4F38-9FCF-AC03A205CCAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Inspiracao.Produto.Api", "src\Loja.Inspiracao.Produto.Api\Loja.Inspiracao.Produto.Api.csproj", "{707D45EB-B4E1-4F38-9FCF-AC03A205CCAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Inspiracao.Produto.Application", "src\Loja.Inspiracao.Produto.Application\Loja.Inspiracao.Produto.Application.csproj", "{DD5F6C1F-038B-4DF4-9120-4C81F9A32638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Inspiracao.Produto.Application", "src\Loja.Inspiracao.Produto.Application\Loja.Inspiracao.Produto.Application.csproj", "{DD5F6C1F-038B-4DF4-9120-4C81F9A32638}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Inspiracao.Produto.Domain", "src\Loja.Inspiracao.Produto.Domain\Loja.Inspiracao.Produto.Domain.csproj", "{94EC1CA8-F351-429D-9077-FC6A926B15D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Inspiracao.Produto.Domain", "src\Loja.Inspiracao.Produto.Domain\Loja.Inspiracao.Produto.Domain.csproj", "{94EC1CA8-F351-429D-9077-FC6A926B15D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Inspiracao.Produto.Infra.Data", "src\Loja.Inspiracao.Produto.Infra.Data\Loja.Inspiracao.Produto.Infra.Data.csproj", "{F5658B6E-B191-42F9-9CCD-FB5E42060927}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Inspiracao.Produto.Infra.Data", "src\Loja.Inspiracao.Produto.Infra.Data\Loja.Inspiracao.Produto.Infra.Data.csproj", "{F5658B6E-B191-42F9-9CCD-FB5E42060927}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Inspiracao.Produto.Infra.IoC", "src\Loja.Inspiracao.Produto.Infra.IoC\Loja.Inspiracao.Produto.Infra.IoC.csproj", "{BDDF651E-B9E4-4383-BD24-CB79C70BE646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Inspiracao.Produto.Infra.IoC", "src\Loja.Inspiracao.Produto.Infra.IoC\Loja.Inspiracao.Produto.Infra.IoC.csproj", "{BDDF651E-B9E4-4383-BD24-CB79C70BE646}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
