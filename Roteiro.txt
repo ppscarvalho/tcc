@@ -9,14 +9,14 @@ Loja.Inspiracao.Core
  -src
 	-Core
 
-Loja.Inspiracao.Produto.Api
+Loja.Inspiracao.Produto.Api (Catalogo)
  -src
 	-Loja.Inspiracao.Produto.Api
 	-Loja.Inspiracao.Produto.Application
 	-Loja.Inspiracao.Produto.Domain
 	-Loja.Inspiracao.Produto.Infra
 	
-Loja.Inspiracao.Fornecedor.Api
+Loja.Inspiracao.Fornecedor.Api (Pessoa - Fornecedor, Cliente e Usuario)
  -src
 	-Fornecedor.Api
 	-Fornecedor.Application
@@ -30,7 +30,7 @@ Loja.Inspiracao.Cliente.Api
 	-Cliente.Domain
 	-Cliente.Infra
 	
-Loja.Inspiracao.ContasPagar.Api
+Loja.Inspiracao.ContasPagar.Api (Financeiro - Contas a Pagar e a Receber, Nota Fiscal)
  -src
 	-ContasPagar.Api
 	-ContasPagar.Application
@@ -65,7 +65,7 @@ Loja.Inspiracao.Autenticacao.Api
 	-Autenticacao.Domain
 	-Autenticacao.Infra		
 	
-Loja.Inspiracao.Util
+Loja.Inspiracao.Util (Resources)
  -src
 	-Loja.Inspiracao.Core
 	-Loja.Inspiracao.RabbitMQ
